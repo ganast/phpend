@@ -1,0 +1,7 @@
+{
+    "require": {
+        "nikic/fast-route": "2.0.0-beta1",
+        "firebase/php-jwt": "^6.10",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

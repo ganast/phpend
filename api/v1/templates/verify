@@ -1,0 +1,8 @@
+<p>Hey {ALIAS},</p>
+<p>Follow the link below to activate your account on {PHPEND_TITLE}!</p>
+<p>Blah, blah and more blah blah.</p>
+<p>{URL}</p>
+<p>Take care!</p>
+<p>Sincerely,</p>
+<br>
+<p>{PHPEND_TITLE} team</p>

@@ -1,0 +1,56 @@
+<?php
+
+/*
+ * Local configuration.
+ */
+
+/**
+ * TODO
+ * 
+ * NOTE: Must include a leading slash, not include a trailing slash.
+ */
+const PHPEND_TITLE = 'PHPEnd';
+
+/**
+ * TODO
+ * 
+ * NOTE: Must include a leading slash, not include a trailing slash.
+ */
+const PHPEND_URL_SUBDIR = '/path/to/api';
+
+/**
+ * TODO
+ * 
+ * NOTE: Must not include a trailing slash.
+ */
+const PHPEND_URL_ORIGIN = 'http://localhost:8080';
+
+/**
+ * 
+ */
+const PHPEND_DSN = 'sqlite:phpend.db';
+
+/**
+ * 
+ */
+const PHPEND_TOKEN_SECRET = 'd4mnf1n3c0ff33';
+
+/**
+ * 
+ */
+const PHPEND_MAIL_FROM = ['phpend@example.com', 'phpend'];
+
+/**
+ * 
+ */
+const PHPEND_MAIL_BCC = 'phpend@example.com';
+
+/**
+ * 
+ */
+const PHPEND_MAIL_SMTP_CREDENTIALS = ['phpend@example.com', 'th30wls4r3n07wh477h3ys33m'];
+
+/**
+ * 
+ */
+const PHPEND_MAIL_SMTP_SERVER = ['smtp.example.com', 465];
