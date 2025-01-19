@@ -5,6 +5,7 @@ DISCLAIMER: PHPEnd is nothing more than a playground for unrestricted experiment
 DISCLAIMER: PHPEnd does not offer any kind of ORM or other database abstraction logic. Custom database access is meant to be programmed directly in the data layer. You can import and use any tool you like to do that but the PHPEnd base uses straight SQL to handle its own database needs and that is very much intended.
 
 TODOs:
+- Attribution
 - Document
 - Test
 - Prettify
