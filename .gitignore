@@ -2,3 +2,8 @@
 .htaccess
 config-local.php
 phpend.db
+
+api/v1/vendor/*
+!api/v1/vendor/ganast
+!api/v1/vendor/composer
+
