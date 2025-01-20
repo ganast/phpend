@@ -1,8 +1,8 @@
 # Details
 
-Date : 2025-01-20 09:38:00
+Date : 2025-01-20 09:42:06
 
-Total : 30 files,  1653 codes, 875 comments, 537 blanks, all 3065 lines
+Total : 28 files,  1367 codes, 875 comments, 535 blanks, all 2777 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -15,8 +15,6 @@ Total : 30 files,  1653 codes, 875 comments, 537 blanks, all 3065 lines
 | [api/v1/base/config.php](/api/v1/base/config.php) | PHP | 24 | 46 | 18 | 88 |
 | [api/v1/base/datalayer.php](/api/v1/base/datalayer.php) | PHP | 265 | 231 | 71 | 567 |
 | [api/v1/base/handlers.php](/api/v1/base/handlers.php) | PHP | 205 | 192 | 81 | 478 |
-| [api/v1/composer.json](/api/v1/composer.json) | JSON | 7 | 0 | 1 | 8 |
-| [api/v1/composer.lock](/api/v1/composer.lock) | JSON | 279 | 0 | 1 | 280 |
 | [api/v1/devnotes.md](/api/v1/devnotes.md) | Markdown | 77 | 0 | 32 | 109 |
 | [api/v1/extend/api.php](/api/v1/extend/api.php) | PHP | 10 | 11 | 6 | 27 |
 | [api/v1/extend/backend.php](/api/v1/extend/backend.php) | PHP | 4 | 0 | 2 | 6 |
