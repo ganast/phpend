@@ -1,10 +1,8 @@
 # Details
 
-Date : 2025-01-20 09:23:14
+Date : 2025-01-20 09:31:00
 
-Directory d:\\AppData\\Apache\\local\\phpend
-
-Total : 41 files,  2583 codes, 1253 comments, 689 blanks, all 4525 lines
+Total : 30 files,  1653 codes, 875 comments, 537 blanks, all 3065 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -30,17 +28,6 @@ Total : 41 files,  2583 codes, 1253 comments, 689 blanks, all 4525 lines
 | [api/v1/include/guard.php](/api/v1/include/guard.php) | PHP | 46 | 33 | 26 | 105 |
 | [api/v1/include/util.php](/api/v1/include/util.php) | PHP | 65 | 42 | 25 | 132 |
 | [api/v1/index.php](/api/v1/index.php) | PHP | 77 | 13 | 37 | 127 |
-| [api/v1/vendor/composer/ClassLoader.php](/api/v1/vendor/composer/ClassLoader.php) | PHP | 286 | 235 | 59 | 580 |
-| [api/v1/vendor/composer/InstalledVersions.php](/api/v1/vendor/composer/InstalledVersions.php) | PHP | 178 | 133 | 49 | 360 |
-| [api/v1/vendor/composer/autoload\_classmap.php](/api/v1/vendor/composer/autoload_classmap.php) | PHP | 6 | 1 | 4 | 11 |
-| [api/v1/vendor/composer/autoload\_files.php](/api/v1/vendor/composer/autoload_files.php) | PHP | 6 | 1 | 4 | 11 |
-| [api/v1/vendor/composer/autoload\_namespaces.php](/api/v1/vendor/composer/autoload_namespaces.php) | PHP | 5 | 1 | 4 | 10 |
-| [api/v1/vendor/composer/autoload\_psr4.php](/api/v1/vendor/composer/autoload_psr4.php) | PHP | 9 | 1 | 4 | 14 |
-| [api/v1/vendor/composer/autoload\_real.php](/api/v1/vendor/composer/autoload_real.php) | PHP | 35 | 4 | 12 | 51 |
-| [api/v1/vendor/composer/autoload\_static.php](/api/v1/vendor/composer/autoload_static.php) | PHP | 49 | 1 | 9 | 59 |
-| [api/v1/vendor/composer/installed.json](/api/v1/vendor/composer/installed.json) | JSON | 276 | 0 | 1 | 277 |
-| [api/v1/vendor/composer/installed.php](/api/v1/vendor/composer/installed.php) | PHP | 59 | 0 | 1 | 60 |
-| [api/v1/vendor/composer/platform\_check.php](/api/v1/vendor/composer/platform_check.php) | PHP | 21 | 1 | 5 | 27 |
 | [api/v1/vendor/ganast/jm/src/com/ganast/jm/db/DBPDOHelpers.php](/api/v1/vendor/ganast/jm/src/com/ganast/jm/db/DBPDOHelpers.php) | PHP | 43 | 12 | 5 | 60 |
 | [api/v1/vendor/ganast/jm/src/com/ganast/jm/exception/CodedErrorException.php](/api/v1/vendor/ganast/jm/src/com/ganast/jm/exception/CodedErrorException.php) | PHP | 11 | 7 | 7 | 25 |
 | [api/v1/vendor/ganast/jm/src/com/ganast/jm/exception/InvalidStateException.php](/api/v1/vendor/ganast/jm/src/com/ganast/jm/exception/InvalidStateException.php) | PHP | 6 | 9 | 6 | 21 |
