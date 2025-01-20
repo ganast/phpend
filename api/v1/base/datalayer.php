@@ -76,6 +76,80 @@ function phpend_data_get_user_data(string $email): array {
 }
 
 /**
+ * TODO
+ *
+ * @param string $email TODO
+ * @param array $changes TODO
+ *
+ * @return void TODO
+ */
+function phpend_data_update_user_data(string $email, array $changes): void {
+
+	if (!$changes) {
+		return;
+	}
+
+	if (!$email) {
+		throw new DataModelException(DataModelException::ERROR_INVALID_ARGUMENT);
+	}
+
+	// todo: move restricted user data fields to another table so that system-
+	// managed user data and user-managed profile data are managed separately,
+	// user can update entire user profile but cannot directly modify system-
+	// managed data such as auth hash, status, etc., keep check to restrict
+	// modification of email in user profile table, though...
+	$restricted = [
+		'EMAIL',
+		'ACCESS',
+		'CREATED_ON',
+		'LAST_LOGIN_ON',
+		'AUTH_HASH',
+		'ACIVE'
+	];
+
+	foreach ($changes as $key => $value) {
+		if (in_array(strtoupper($key), $restricted, false)) {
+			throw new DataModelException(DataModelException::ERROR_INVALID_ARGUMENT);
+		}
+	}
+
+	$sql = "
+	UPDATE user
+	SET ";
+
+	$params = array();
+	$i = 0;
+	foreach ($changes as $key => $value) {
+		if ($i > 0) {
+			$sql .= ",\n";
+		}
+		$sql .= "{$key}=:{$key}";
+		$params[":{$key}"] = $value;
+		$i++;
+	}
+
+	$sql .= "
+	WHERE email=:email";
+	$params[':email'] = $email;
+
+    try {
+
+		$db = phpend_get_pdo();
+
+		$st = $db->prepare($sql);
+
+		// todo: check return value of following call and decide how to report data
+		// model update failure after a nonetheless successfull call...
+		$st->execute($params);
+	}
+	catch (PDOException $ex) {
+		throw new DataModelException(DataModelException::ERROR_DATASTORE_UPDATE, $ex);
+	}
+
+}
+
+
+/**
  * Checks if a user has admin-level access rights.
  * 
  * @param string $email a valid email address

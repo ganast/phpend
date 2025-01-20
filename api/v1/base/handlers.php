@@ -460,7 +460,17 @@ function phpend_api_delete_user(array $vars, array $params, array $options): arr
  * @return array TODO
  */
 function phpend_api_update_user(array $vars, array $params, array $options): array {
-	throw new HTTPAPIErrorException('OOPS');
+
+	$email = $vars['email'];
+
+	try {
+		phpend_update_user_profile($email, $params);
+	}
+	catch (BackendException $ex) {
+		throw new HTTPAPIErrorException('OOPS');
+	}
+	
+	return [];
 }
 
 /**

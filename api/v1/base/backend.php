@@ -66,6 +66,19 @@ function phpend_get_user_profile(string $email): array {
     }
 }
 
+ /**
+ * TODO
+ * 
+ */
+function phpend_update_user_profile(string $email, array $changes) {
+    try {
+        return phpend_data_update_user_data($email, $changes);
+    }
+    catch (DataModelException $ex) {
+        throw new BackendException(BackendException::ERROR_IN_DATAMODEL, $ex);
+    }
+}
+
 /**
  * TODO
  * 
