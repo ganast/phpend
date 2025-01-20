@@ -1,7 +1,5 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-
 /**
  * TODO
  * 
@@ -10,7 +8,7 @@ function phpend_auth_login_user(string $email, string $password): string {
 
     try {
 
-        // account does not exist...
+        // only existing accounts can login...
 		if (!phpend_data_get_user_data($email)) {
             throw new AuthException(AuthException::ERROR_INVALID_CREDENTIALS);
 		}
