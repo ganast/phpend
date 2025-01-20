@@ -1,10 +1,10 @@
-# Diff Details
+# Details
 
-Date : 2025-01-20 09:33:46
+Date : 2025-01-20 09:38:00
 
 Total : 30 files,  1653 codes, 875 comments, 537 blanks, all 3065 lines
 
-[Summary](results.md) / [Details](details.md) / [Diff Summary](diff.md) / Diff Details
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
 ## Files
 | filename | language | code | comment | blank | total |
@@ -40,4 +40,4 @@ Total : 30 files,  1653 codes, 875 comments, 537 blanks, all 3065 lines
 | [verify/include/main.js](/verify/include/main.js) | JavaScript | 40 | 0 | 7 | 47 |
 | [verify/index.html](/verify/index.html) | HTML | 15 | 4 | 15 | 34 |
 
-[Summary](results.md) / [Details](details.md) / [Diff Summary](diff.md) / Diff Details
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
