@@ -144,6 +144,21 @@ function phpend_set_user_active(string $email, bool $active) {
     catch (DataModelException $ex) {
         throw new BackendException(BackendException::ERROR_IN_DATAMODEL, $ex);
     }
+	
+	// TODO: make it so that a welcome email is only sent to a user after the first
+	// activation of the user's account and not after subsequent activations that
+	// may take place after forced deactivation, this will most probably require a
+	// "welcomed" flag or something like that in the user's profile which will be
+	// set after account registration and cleared after sending a welcome email for
+	// the first time and only then...
+
+	try {
+		$profile = phpend_get_user_profile($email);
+		phpend_util_send_email($email, 'welcome', $profile['alias']);
+	}
+	catch (Exception $ex) {
+		throw new BackendException(BackendException::ERROR_SENDING_EMAIL, $ex);
+	}
 }
 
 /**
@@ -170,9 +185,11 @@ function phpend_update_user_password(string $email, string $password) {
 class BackendException extends Exception {
 
     public const ERROR_IN_DATAMODEL = 1;
+    public const ERROR_SENDING_EMAIL = 2;
 
     private static $messages = [
-        BackendException::ERROR_IN_DATAMODEL => 'Datamodel error'
+        BackendException::ERROR_IN_DATAMODEL => 'Datamodel error',
+        BackendException::ERROR_SENDING_EMAIL => 'Could not send email'
     ];
 
     public function __construct(int $code, Exception $previous = null) {

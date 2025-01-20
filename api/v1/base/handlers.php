@@ -398,22 +398,15 @@ function phpend_api_activate_user(array $vars, array $params, array $options): a
 		phpend_set_user_active($email, true);
 	}
 	catch (BackendException $ex) {
-		throw new HTTPAPIErrorException('OOPS');
-	}
-	
-	// TODO: make it so that a welcome email is only sent to a user after the first
-	// activation of the user's account and not after subsequent activations that
-	// may take place after forced deactivation, this will most probably require a
-	// "welcomed" flag or something like that in the user's profile which will be
-	// set after account registration and cleared after sending a welcome email for
-	// the first time and only then...
 
-	try {
-		$profile = phpend_get_user_profile($email);
-		phpend_util_send_email($email, 'welcome', $profile['alias']);
-	}
-	catch (Exception $ex) {
-		throw new HTTPAPIErrorException('ERROR_SENDING_EMAIL');
+		switch ($ex->getCode()) {
+
+			case BackendException::ERROR_SENDING_EMAIL:
+				throw new HTTPAPIErrorException('ERROR_SENDING_EMAIL');
+
+			default:
+				throw new HTTPAPIErrorException('OOPS');
+		}
 	}
 
 	return [];

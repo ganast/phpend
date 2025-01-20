@@ -10,6 +10,11 @@ function phpend_auth_login_user(string $email, string $password): string {
 
     try {
 
+        // account does not exist...
+		if (!phpend_data_get_user_data($email)) {
+            throw new AuthException(AuthException::ERROR_INVALID_CREDENTIALS);
+		}
+
         // inactive accounts cannot login...
         if (!phpend_data_is_user_active($email)) {
             throw new AuthException(AuthException::ERROR_ACCOUNT_INACTIVE);

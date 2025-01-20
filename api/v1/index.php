@@ -13,21 +13,22 @@ require __DIR__ . '/vendor/ganast/jm/src/com/ganast/jm/http/json/JSONHTTPHelpers
 require __DIR__ . '/vendor/ganast/jm/src/com/ganast/jm/jwt/JWTHelpers.php';
 require __DIR__ . '/vendor/ganast/jm/src/com/ganast/jm/mail/MailHelpers.php';
 
-require 'include/config.php';
 require 'include/error.php';
 require 'include/util.php';
-require 'include/datalayer.php';
-require 'include/handlers.php';
-require 'include/backend.php';
-require 'include/api.php';
 require 'include/auth.php';
 require 'include/guard.php';
 
-include 'api/config.php';
-include 'api/datalayer.php';
-include 'api/handlers.php';
-include 'api/backend.php';
-require 'api/api.php';
+require 'base/config.php';
+require 'base/datalayer.php';
+require 'base/handlers.php';
+require 'base/backend.php';
+require 'base/api.php';
+
+include 'extend/config.php';
+include 'extend/datalayer.php';
+include 'extend/handlers.php';
+include 'extend/backend.php';
+require 'extend/api.php';
 
 require PHPEND_LOCAL_CONFIG;
 
