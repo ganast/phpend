@@ -74,7 +74,7 @@ function phpend_api_test(array $vars, array $params, array $options): array {
  */
 function phpend_api_info(array $vars, array $params, array $options): array {
 
-	$version = '1.0.1.20240710';
+	$version = '1.1.0-alpha.1';
 
 	$hostname = gethostname() ?? '';
 	if (!$hostname) {
