@@ -308,6 +308,41 @@ function phpend_data_register_user(string $email, string $password, string $alia
 }
 
 /**
+ * Delete a registered user.
+ * 
+ * @param string $email a valid email address
+ *
+ * @throws DataModelException if the requested operation could not be completed
+ * for any reason. The exception's error code and message provide more
+ * information about the error:
+ * - ERROR_INVALID_ARGUMENT if the specified email was invalid
+ * - ERROR_DATASTORE_UPDATE if the backing datastore could not be updated
+*/
+function phpend_data_delete_user(string $email): void {
+
+	if (!$email) {
+		throw new DataModelException(DataModelException::ERROR_INVALID_ARGUMENT);
+	}
+
+	try {
+
+		$db = phpend_get_pdo();
+
+		$st = $db->prepare("
+			DELETE FROM user
+			WHERE email=?
+		");
+
+		// todo: check return value of following call and decide how to report data
+		// model update failure after a nonetheless successfull call...
+		$st->execute([$email]);
+	}
+	catch (PDOException $ex) {
+		throw new DataModelException(DataModelException::ERROR_DATASTORE_UPDATE, $ex);
+	}
+}
+
+/**
  * Authenticate a user with email and password.
  * 
  * @param string $email a valid email address

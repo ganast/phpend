@@ -111,6 +111,20 @@ function phpend_register_user(string $email, string $password, string $alias, st
  * TODO
  * 
  */
+function phpend_delete_user(string $email): void {
+
+    try {
+        phpend_data_delete_user($email);
+    }
+    catch (DataModelException $ex) {
+        throw new BackendException(BackendException::ERROR_IN_DATAMODEL, $ex);
+    }
+}
+
+/**
+ * TODO
+ * 
+ */
 function phpend_is_user_registered(string $email): bool {
     try {
         return phpend_data_is_user_registered($email);

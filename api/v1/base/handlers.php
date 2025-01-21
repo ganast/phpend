@@ -438,8 +438,10 @@ function phpend_api_deactivate_user(array $vars, array $params, array $options):
 }
 
 /**
- * TODO
- *
+ * Deletes a registered user.
+ * 
+ * Expects vars: email.
+ * 
  * @param array $vars TODO
  * @param array $params TODO
  * @param array $options TODO
@@ -447,7 +449,24 @@ function phpend_api_deactivate_user(array $vars, array $params, array $options):
  * @return array TODO
  */
 function phpend_api_delete_user(array $vars, array $params, array $options): array {
-	throw new HTTPAPIErrorException('OOPS');
+
+	$email = $vars['email'];
+
+	try {
+		phpend_auth_logout_user($email);
+	}
+	catch (BackendException $ex) {
+		throw new HTTPAPIErrorException('OOPS');
+	}
+
+	try {
+		phpend_delete_user($email);
+	}
+	catch (BackendException $ex) {
+		throw new HTTPAPIErrorException('OOPS');
+	}
+	
+	return [];
 }
 
 /**
@@ -483,5 +502,6 @@ function phpend_api_update_user(array $vars, array $params, array $options): arr
  * @return array TODO
  */
 function phpend_api_update_user_status(array $vars, array $params, array $options): array {
-	throw new HTTPAPIErrorException('OOPS');
+	// nothing to implement here yet...
+	return [];
 }
