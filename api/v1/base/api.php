@@ -76,11 +76,11 @@ $phpend_api_endpoints = [
 $phpend_api_errors = [
 
     // this is to report errors from which the backend might actually recover (i.e.,
-	// later, e.g., temporary loss ofconnectivity with a database server or bad
+	// later, e.g., temporary loss of connectivity with a database server or bad
 	// configuration), not uncaught errors that are most likely bugs, those should
 	// be propagated to client code and handled appropriately (e.g., be reported,
 	// trigger a graceful failure, etc.) or not handled at all (i.e., lead to a
-	// fatal failure) so that they can be identified andfixed...
+	// fatal failure) so that they can be identified and fixed...
     'OOPS'											=> [99, 'Something went wrong, please try again later'],
 
 	'INVALID_CREDENTIALS'							=> [11, 'Invalid credentials'],
