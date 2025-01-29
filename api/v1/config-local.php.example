@@ -38,6 +38,32 @@ const PHPEND_TOKEN_SECRET = 'd4mnf1n3c0ff33';
 /**
  * 
  */
+const PHPEND_DEBUG = false;
+  
+/**
+ * 
+ */
+const PHPEND_SKIP_ACTIVATION = false;
+
+/**
+ * 
+ */
+const PHPEND_TOKEN_ISSUER = 'phpend';
+
+/**
+ * 
+ */
+const PHPEND_AUTH_TOKEN_EXPIRATION = '+6 Months';
+
+/**
+ * 
+ */
+// const PHPEND_ACTION_TOKEN_EXPIRATION = '+5 Minutes';
+const PHPEND_ACTION_TOKEN_EXPIRATION = '+6 Months';
+
+/**
+ * 
+ */
 const PHPEND_MAIL_FROM = ['phpend@example.com', 'phpend'];
 
 /**

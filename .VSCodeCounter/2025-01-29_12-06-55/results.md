@@ -1,29 +1,29 @@
 # Summary
 
-Date : 2025-01-20 09:42:06
+Date : 2025-01-29 12:06:55
 
-Total : 28 files,  1367 codes, 875 comments, 535 blanks, all 2777 lines
+Total : 31 files,  1544 codes, 903 comments, 586 blanks, all 3033 lines
 
 Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
 ## Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| PHP | 22 | 1,166 | 866 | 454 | 2,486 |
+| PHP | 23 | 1,278 | 890 | 484 | 2,652 |
+| JavaScript | 3 | 115 | 1 | 17 | 133 |
 | Markdown | 2 | 88 | 0 | 38 | 126 |
-| JavaScript | 2 | 79 | 1 | 12 | 92 |
-| HTML | 2 | 34 | 8 | 31 | 73 |
+| HTML | 3 | 63 | 12 | 47 | 122 |
 
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 28 | 1,367 | 875 | 535 | 2,777 |
-| api | 23 | 1,243 | 866 | 486 | 2,595 |
-| api\\v1 | 23 | 1,243 | 866 | 486 | 2,595 |
-| api\\v1\\base | 5 | 636 | 597 | 230 | 1,463 |
+| . | 31 | 1,544 | 903 | 586 | 3,033 |
+| api | 24 | 1,355 | 890 | 516 | 2,761 |
+| api\\v1 | 24 | 1,355 | 890 | 516 | 2,761 |
+| api\\v1\\base | 5 | 728 | 620 | 255 | 1,603 |
 | api\\v1\\extend | 5 | 32 | 61 | 22 | 115 |
 | api\\v1\\include | 4 | 259 | 136 | 104 | 499 |
-| api\\v1\\vendor | 7 | 162 | 59 | 61 | 282 |
+| api\\v1\\vendor | 8 | 182 | 60 | 66 | 308 |
 | api\\v1\\vendor\\ganast | 7 | 162 | 59 | 61 | 282 |
 | api\\v1\\vendor\\ganast\\jm | 7 | 162 | 59 | 61 | 282 |
 | api\\v1\\vendor\\ganast\\jm\\src | 7 | 162 | 59 | 61 | 282 |
@@ -36,6 +36,8 @@ Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-
 | api\\v1\\vendor\\ganast\\jm\\src\\com\\ganast\\jm\\http\\json | 1 | 10 | 7 | 6 | 23 |
 | api\\v1\\vendor\\ganast\\jm\\src\\com\\ganast\\jm\\jwt | 1 | 41 | 9 | 16 | 66 |
 | api\\v1\\vendor\\ganast\\jm\\src\\com\\ganast\\jm\\mail | 1 | 34 | 4 | 11 | 49 |
+| register | 2 | 65 | 4 | 21 | 90 |
+| register\\include | 1 | 36 | 0 | 5 | 41 |
 | reset | 2 | 58 | 5 | 21 | 84 |
 | reset\\include | 1 | 39 | 1 | 5 | 45 |
 | verify | 2 | 55 | 4 | 22 | 81 |

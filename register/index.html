@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!--
+Sample, bare-minimum account registrationm page. Modify or replace as needed.
+(c) 2025 by ganast (ganast@ganast.com)
+-->
+
+<html lang="en">
+
+    <head>
+
+		<title>Account registration</title>
+
+		<meta charset="utf-8" />
+
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+		<script src=" https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
+
+		<script src="include/main.js"></script>
+
+	</head>
+
+    <body>
+    
+		<div id="sForm" style="display: block;">
+			<p>Email:</p>
+			<p><input id="tEmail" type="text"></input></p>
+			<p>Password:</p>
+			<p><input id="tPassword" type="password"></input></p>
+			<p>Alias:</p>
+			<p><input id="tAlias" type="text"></input></p>
+			<p>Name:</p>
+			<p><input id="tNameFirst" type="text"></input></p>
+			<p>Surname:</p>
+			<p><input id="tNameLast" type="text"></input></p>
+			<p>Organization:</p>
+			<p><input id="tOrganization" type="text"></input></p>
+			<p><button onclick="r()">Submit</button></p>
+		</div>
+
+		<div id="sSuccess" style="display: none;"><p>Your account has been created successfully.</p></div>
+
+		<div id="sFailure" style="display: none;"><p>Something went wrong. Please try again.</p></div>
+
+    </body>
+
+</html>

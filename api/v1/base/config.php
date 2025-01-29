@@ -8,32 +8,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 /**
  * 
- */
-const PHPEND_DEBUG = true;
-  
-/**
- * 
- */
-const PHPEND_SKIP_ACTIVATION = false;
-
-/**
- * 
- */
-const PHPEND_TOKEN_ISSUER = 'phpend';
-
-/**
- * 
- */
-const PHPEND_AUTH_TOKEN_EXPIRATION = '+6 Months';
-
-/**
- * 
- */
-// const PHPEND_ACTION_TOKEN_EXPIRATION = '+5 Minutes';
-const PHPEND_ACTION_TOKEN_EXPIRATION = '+6 Months';
-
-/**
- * 
  * NOTE: Must include a leading slash, not include a trailing slash.
  */
 const PHPEND_API_PATH = '/api/v1';
