@@ -4,7 +4,7 @@ function preSubmit() {
 }
 
 function postSubmit() {
-	// document.getElementById('sResetForm').remove();
+	document.getElementById('sForm').remove();
 }
 
 function success() {
@@ -19,11 +19,13 @@ function r() {
 	var a = new URL(window.location.href).searchParams.get("a");
 	if (!a) {
 		failure();
+		postSubmit();
 		return;
 	}
 	var u = jwtDecode(a)['target'];
 	if (!u) {
 		failure();
+		postSubmit();
 		return;
 	}
 	preSubmit();
