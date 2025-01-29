@@ -2,8 +2,6 @@
 
 Date : 2025-01-29 12:06:55
 
-Directory d:\\AppData\\Apache\\local\\phpend
-
 Total : 31 files,  1544 codes, 903 comments, 586 blanks, all 3033 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
