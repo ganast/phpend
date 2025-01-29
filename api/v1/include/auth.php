@@ -104,10 +104,6 @@ function phpend_auth_send_action_email(string $action, array $params): void {
 	
 	$url = PHPEND_URL_ORIGIN . PHPEND_URL_SUBDIR . $webapp_path . '?' . PHPEND_WEBAPP_ACTION_PARAM . '=' . $token;
 
-	if (PHPEND_DEBUG) {
-		echo $url;
-	}
-
 	// send email...
 	if (!phpend_util_send_email($params['target'], $action, ['URL' => $url])) {
 		throw new AuthException(AuthException::ERROR_SENDING_EMAIL);
